@@ -1,43 +1,4 @@
-# Adult Census Income Classification & Model Comparison
-
-## 📌 Project Overview
-This project implements an end-to-end Machine Learning pipeline to predict whether an individual's annual income exceeds **$50,000** based on the 1994 U.S. Census dataset. Designed for Community Development Financial Institutions (CDFIs) to streamline income verification, the project compares a tuned **Decision Tree Classifier** with a deep **Feedforward Neural Network** built using Keras/TensorFlow.
-
----
-
-## 🛠️ Data Preprocessing & Feature Engineering
-* **Feature Selection & Redundancy:** Dropped redundant attributes (`fnlwgt`, `education`, `relationship`) while retaining numerical indicators like `education-num`.
-* **Missing Value Imputation:** Logged missing flags (`age_na`, `hours-per-week_na`) and imputed missing continuous values using feature means.
-* **Encoding & Scaling:** One-hot encoded multi-class categorical variables (`pd.get_dummies`), label-encoded target outputs, and standardized features using `StandardScaler` for the neural network pipeline.
-* **Class Imbalance:** Handled the 3:1 majority class bias using balanced class weighting (`class_weight='balanced'`) during tree training.
-
----
-
-## 📊 Model Performance & Results
-
-| Model Architecture | Test Accuracy | F1-Score | Key Highlights |
-| :--- | :---: | :---: | :--- |
-| **Decision Tree** (Tuned via GridSearch) | **80.98%** | **0.615** | High interpretability; top predictive features were marital status, age, and education level. |
-| **Deep Neural Network** (4 Dense Layers) | **83.45%** | **0.624** | Highest accuracy; architecture: 64 → 32 → 16 → 8 units (ReLU) + 1 output unit (Sigmoid). |
-
----
-
-## 💡 Key Findings & Recommendations
-* **Feature Importance:** Feature importance analysis revealed that `marital-status_Married-civ-spouse` (~23.8%), `age` (~18.7%), and `education-num` (~13.3%) were the strongest indicators of income level.
-* **Production Recommendation:** The **Decision Tree** is recommended for real-world deployment due to its ease of auditability and interpretability when explaining eligibility decisions to non-technical stakeholders.
-
----
-
-## 🚀 How to Run
-1. Clone the repository:
-   ```bash
-   git clone [https://github.com/your-username/census-income-classification.git](https://github.com/your-username/census-income-classification.git)
-   cd census-income-classification
-Install dependencies:
-
-Bash
-pip install pandas numpy scikit-learn tensorflow matplotlib seaborn
-Open the Jupyter Notebook:
-
-Bash
-jupyter notebook Capstone.ipynb
+Adult Census Income Classification & Model Comparison📌 Project OverviewThis project implements an end-to-end Machine Learning pipeline to predict whether an individual's annual income exceeds $50,000 based on the 1994 U.S. Census dataset. Designed for Community Development Financial Institutions (CDFIs) to streamline income verification, the project compares a tuned Decision Tree Classifier with a deep Feedforward Neural Network built using Keras/TensorFlow.  💻 Technical Skills & Frameworks UsedMachine Learning Architecture: Supervised Classification (Decision Trees, Feedforward Neural Networks / Multi-Layer Perceptron), Hyperparameter Optimization via GridSearchCV, Model Evaluation ($\text{F1-score}$, Accuracy).  Data Engineering & Preprocessing: Collinear Feature Dropping, Mean Imputation with Missingness Flags (age_na, hours-per-week_na), Z-score Standardization via StandardScaler, One-Hot Encoding (pd.get_dummies), Class Weight Balancing.  Libraries & Frameworks: Python, TensorFlow / Keras, Scikit-Learn, Pandas, NumPy, Matplotlib, Seaborn.  🛠️ Data Preprocessing & Feature EngineeringFeature Selection & Redundancy: Dropped redundant attributes (fnlwgt, education, relationship) while retaining numerical indicators like education-num.  Missing Value Imputation: Logged missing flags (age_na, hours-per-week_na) and imputed missing continuous values using feature means.  Encoding & Scaling: One-hot encoded multi-class categorical variables (pd.get_dummies), label-encoded target outputs, and standardized features using StandardScaler for the neural network pipeline.  Class Imbalance: Handled the 3:1 majority class bias using balanced class weighting (class_weight='balanced') during tree training.  📊 Model Performance & ResultsModel ArchitectureTest AccuracyF1-ScoreKey HighlightsDecision Tree (Tuned via GridSearch)80.98%0.615High interpretability; top predictive features were marital status, age, and education level.  Deep Neural Network (4 Dense Layers)83.45%0.624Highest accuracy; architecture: 64 → 32 → 16 → 8 units (ReLU) + 1 output unit (Sigmoid).  💡 Key Findings & RecommendationsFeature Importance: Feature importance analysis revealed that marital-status_Married-civ-spouse (~23.8%), age (~18.7%), and education-num (~13.3%) were the strongest indicators of income level.  Production Recommendation: The Decision Tree is recommended for real-world deployment due to its ease of auditability and interpretability when explaining eligibility decisions to non-technical stakeholders.  🧠 What I Learned & Key InsightsScale Invariance vs. Neural Net Requirements: Tree-based models handle non-scaled categorical and continuous features naturally, whereas standardizing inputs via StandardScaler was essential for stable gradient descent and faster convergence in the 4-layer Keras architecture.  Accuracy vs. Auditability Trade-Off in Deployment: While the Deep Neural Network achieved higher performance metrics (83.45% accuracy, 0.624 F1), the tuned Decision Tree (80.98% accuracy) offers complete decision path transparency. In financial/CDFI contexts where regulatory compliance and non-discriminatory explanation of eligibility decisions are mandatory, model interpretability often outweighs a ~2.5% bump in raw accuracy.  Dominance of Structural Features: Feature importance extraction confirmed that demographic stability indicators (marital-status_Married-civ-spouse at ~23.8%) and human capital metrics (education-num at ~13.3%, age at ~18.7%) carry significantly higher predictive power than raw weekly labor hours.  🔮 Possible Next Steps & Future WorkBridging the Performance Gap with Gradient Boosting: Train and benchmark XGBoost and LightGBM classifiers to evaluate tree ensemble performance on tabular data while retaining feature importance extraction.Model Explainability (XAI) for the Neural Network: Implement SHAP (SHapley Additive exPlanations) or LIME on the Deep Neural Network to visualize instance-level feature contributions.Advanced Imbalance Handling: Experiment with SMOTE (Synthetic Minority Over-sampling Technique) or test custom Focal Loss functions in Keras to directly address minority class recall and push the F1-score beyond the ~0.62 ceiling.  Algorithmic Fairness & Bias Audit: Conduct a fairness assessment across sensitive demographic attributes (e.g., gender, race) using frameworks like Fairlearn or AIF360 to ensure automated income verification decisions do not perpetuate systemic disparities.  🚀 How to RunClone the repository:Bashgit clone https://github.com/your-username/census-income-classification.git
+cd census-income-classification
+Install dependencies:Bashpip install pandas numpy scikit-learn tensorflow matplotlib seaborn
+Open the Jupyter Notebook:Bashjupyter notebook Capstone.ipynb
