@@ -37,6 +37,9 @@ Class Imbalance: Handled the 3:1 majority class bias using balanced class weight
 💡 Key Findings & Recommendations
 Feature Importance: Analysis revealed that marital-status_Married-civ-spouse (~23.8%), age (~18.7%), and education-num (~13.3%) were the strongest indicators of income level.  
 
+<img width="422" height="169" alt="image" src="https://github.com/user-attachments/assets/f1f8a5a6-3560-4560-92a0-dfa942959748" />
+
+
 
 Production Recommendation: The Decision Tree is recommended for real-world deployment due to its ease of auditability and interpretability when explaining eligibility decisions to non-technical stakeholders.  
 
