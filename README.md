@@ -7,7 +7,7 @@ This project implements an end-to-end Machine Learning pipeline to predict wheth
 Machine Learning Architecture: Supervised Classification (Decision Trees, Feedforward Neural Networks / Multi-Layer Perceptron), Hyperparameter Optimization via GridSearchCV, Model Evaluation (F1-score, Accuracy).  
 
 
-Data Engineering & Preprocessing: Collinear Feature Dropping, Mean Imputation with Missingness Flags (age_na, hours-per-week_na), Z-score Standardization via StandardScaler, One-Hot Encoding (pd.get_dummies), Class Weight Balancing.  
+Data Engineering & Preprocessing: Feature Dropping, Mean Imputation with Missingness Flags (age_na, hours-per-week_na), StandardScaler, One-Hot Encoding (pd.get_dummies), Class Weight Balancing.  
 
 
 Libraries & Frameworks: Python, TensorFlow / Keras, Scikit-Learn, Pandas, NumPy, Matplotlib, Seaborn.  
