@@ -64,5 +64,7 @@ Bash
 pip install pandas numpy scikit-learn tensorflow matplotlib seaborn
 Open the Jupyter Notebook:
 
+Tip: seek the notebook for more detailed analysis of the project
+
 Bash
 jupyter notebook Capstone.ipynb
