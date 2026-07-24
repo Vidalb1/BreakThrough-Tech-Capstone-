@@ -21,8 +21,7 @@ Missing Value Imputation: Logged missing flags (age_na, hours-per-week_na) and i
 
 
 Encoding & Scaling: One-hot encoded multi-class categorical variables (pd.get_dummies), label-encoded target outputs, and standardized features using StandardScaler for the neural network pipeline.  
-IPYNB
-+ 1
+
 
 Class Imbalance: Handled the 3:1 majority class bias using balanced class weighting (class_weight='balanced') during tree training.  
 
@@ -35,8 +34,6 @@ High interpretability; top predictive features were marital status, age, and edu
 
 Deep Neural Network (4 Dense Layers)	83.45%	0.624	
 Highest accuracy; architecture: 64 → 32 → 16 → 8 units (ReLU) + 1 output unit (Sigmoid).  
-IPYNB
-+ 1
 
 💡 Key Findings & Recommendations
 Feature Importance: Analysis revealed that marital-status_Married-civ-spouse (~23.8%), age (~18.7%), and education-num (~13.3%) were the strongest indicators of income level.  
