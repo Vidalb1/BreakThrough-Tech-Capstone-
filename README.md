@@ -1,4 +1,4 @@
-Adult Census Income Classification & Model Comparison
+# Adult Census Income Classification & Model Comparison
 📌 Project Overview
 This project implements an end-to-end Machine Learning pipeline to predict whether an individual's annual income exceeds $50,000 based on the 1994 U.S. Census dataset. Designed for Community Development Financial Institutions (CDFIs) to streamline income verification, the project compares a tuned Decision Tree Classifier with a deep Feedforward Neural Network built using Keras/TensorFlow.  
 
