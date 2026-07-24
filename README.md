@@ -27,13 +27,10 @@ Class Imbalance: Handled the 3:1 majority class bias using balanced class weight
 
 
 📊 Model Performance & Results
-Model Architecture	Test Accuracy	F1-Score	Key Highlights
-Decision Tree (Tuned via GridSearch)	80.98%	0.615	
-High interpretability; top predictive features were marital status, age, and education level.  
-
-
-Deep Neural Network (4 Dense Layers)	83.45%	0.624	
-Highest accuracy; architecture: 64 → 32 → 16 → 8 units (ReLU) + 1 output unit (Sigmoid).  
+| Model Architecture | Test Accuracy | F1-Score | Key Highlights |
+| :--- | :---: | :---: | :--- |
+| **Decision Tree** (Tuned via GridSearch) | **80.98%** | **0.615** | High interpretability; top features: marital status, age, education. |
+| **Deep Neural Network** (4 Dense Layers) | **83.45%** | **0.624** | Highest accuracy; architecture: 64 → 32 → 16 → 8 units (ReLU) + Sigmoid. | 
 
 💡 Key Findings & Recommendations
 Feature Importance: Analysis revealed that marital-status_Married-civ-spouse (~23.8%), age (~18.7%), and education-num (~13.3%) were the strongest indicators of income level.  
