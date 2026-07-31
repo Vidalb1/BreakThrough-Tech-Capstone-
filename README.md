@@ -58,6 +58,7 @@ The neural network edged out the Decision Tree on both metrics, but the gap wasn
 - Try resampling techniques (e.g., SMOTE) instead of only class weighting to address class imbalance, and compare the effect on F1-score.
 - Run a fairness audit of model errors across race, sex, and native-country subgroups before considering any real-world deployment.
 - Experiment with additional or alternative features and compare against Logistic Regression and KNN baselines.
+- Have a better use of graph visualizations to get a better grasp of our dataset
 ## 🚀 How to Run
  
 Clone the repository:
